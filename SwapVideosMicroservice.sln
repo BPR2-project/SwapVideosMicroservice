@@ -13,6 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GIT", "GIT", "{2BE1AD7D-A02
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{9E8E9B98-A3C7-4632-92EA-BD9013C35A1F}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main_swapvideosbackend.yml = .github\workflows\main_swapvideosbackend.yml
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.API", "SwapVideos.API\SwapVideos.API.csproj", "{1A984C65-0EB7-4264-AB14-711C0B1097FD}"
 EndProject
