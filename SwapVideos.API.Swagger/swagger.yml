@@ -3,7 +3,7 @@ info:
   description: "Service responsible for handling videos."
   version: "1.0.0"
   title: "Swap Videos Microservice"
-host: "localhost:7012"
+host: "swapvideosbackend.azurewebsites.net"
 basePath: "/"
 tags:
   - name: "videos"

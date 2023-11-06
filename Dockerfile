@@ -7,5 +7,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runenv
 ENV ASPNETCORE_ENVIRONMENT Development
 WORKDIR /
 COPY --from=build /publish .
-ENTRYPOINT ["dotnet", "SwapVideos.API.dll", "--urls", "http://*:5000"]
+ENTRYPOINT ["dotnet", "SwapVideos.API.dll", "--urls", "http://*:5001"]
 EXPOSE 5001
