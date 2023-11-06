@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connectors", "Connectors", "{3F01FB59-ADBC-425A-A85F-4D2E1BB5C254}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{63D49479-D18D-4829-945C-5680C3E8CB74}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GIT", "GIT", "{2BE1AD7D-A02F-4B59-870F-2A28A4DE68EC}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{9E8E9B98-A3C7-4632-92EA-BD9013C35A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.API", "SwapVideos.API\SwapVideos.API.csproj", "{1A984C65-0EB7-4264-AB14-711C0B1097FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.API.Swagger", "SwapVideos.API.Swagger\SwapVideos.API.Swagger.csproj", "{59814FEA-49F9-457F-B796-23D330075E90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Data", "SwapVideos.Data\SwapVideos.Data.csproj", "{A7CD705F-987F-4889-8FFF-E1D121E56CD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Data.Models", "SwapVideos.Data.Models\SwapVideos.Data.Models.csproj", "{AF43C40A-8761-4B73-8AAC-1AE038B21FF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Data.Repositories", "SwapVideos.Data.Repositories\SwapVideos.Data.Repositories.csproj", "{DF96FB5F-9DAE-4081-A292-D729B10F3D9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Extensions", "SwapVideos.Extensions\SwapVideos.Extensions.csproj", "{8927A214-2B15-4F66-BA74-A671571C4DC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Mappers", "SwapVideos.Mappers\SwapVideos.Mappers.csproj", "{917C34A0-3D28-4B43-B817-BD3DBCDBF24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Services", "SwapVideos.Services\SwapVideos.Services.csproj", "{D2E9B6E6-B4D3-4A4F-9FCF-487932FC7A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Tests", "SwapVideos.Tests\SwapVideos.Tests.csproj", "{D6E5B124-B29D-44D8-89CF-0EA6CCBC349D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapVideos.Tests.Integration", "SwapVideos.Tests.Integration\SwapVideos.Tests.Integration.csproj", "{E8FACBF0-E14F-49CC-A8FF-7B4BF1E218EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A984C65-0EB7-4264-AB14-711C0B1097FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A984C65-0EB7-4264-AB14-711C0B1097FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A984C65-0EB7-4264-AB14-711C0B1097FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A984C65-0EB7-4264-AB14-711C0B1097FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59814FEA-49F9-457F-B796-23D330075E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59814FEA-49F9-457F-B796-23D330075E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59814FEA-49F9-457F-B796-23D330075E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59814FEA-49F9-457F-B796-23D330075E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CD705F-987F-4889-8FFF-E1D121E56CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CD705F-987F-4889-8FFF-E1D121E56CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CD705F-987F-4889-8FFF-E1D121E56CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CD705F-987F-4889-8FFF-E1D121E56CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF43C40A-8761-4B73-8AAC-1AE038B21FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF43C40A-8761-4B73-8AAC-1AE038B21FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF43C40A-8761-4B73-8AAC-1AE038B21FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF43C40A-8761-4B73-8AAC-1AE038B21FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF96FB5F-9DAE-4081-A292-D729B10F3D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF96FB5F-9DAE-4081-A292-D729B10F3D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF96FB5F-9DAE-4081-A292-D729B10F3D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF96FB5F-9DAE-4081-A292-D729B10F3D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8927A214-2B15-4F66-BA74-A671571C4DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8927A214-2B15-4F66-BA74-A671571C4DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8927A214-2B15-4F66-BA74-A671571C4DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8927A214-2B15-4F66-BA74-A671571C4DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{917C34A0-3D28-4B43-B817-BD3DBCDBF24A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917C34A0-3D28-4B43-B817-BD3DBCDBF24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917C34A0-3D28-4B43-B817-BD3DBCDBF24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917C34A0-3D28-4B43-B817-BD3DBCDBF24A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2E9B6E6-B4D3-4A4F-9FCF-487932FC7A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E9B6E6-B4D3-4A4F-9FCF-487932FC7A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E9B6E6-B4D3-4A4F-9FCF-487932FC7A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E9B6E6-B4D3-4A4F-9FCF-487932FC7A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E5B124-B29D-44D8-89CF-0EA6CCBC349D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E5B124-B29D-44D8-89CF-0EA6CCBC349D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E5B124-B29D-44D8-89CF-0EA6CCBC349D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E5B124-B29D-44D8-89CF-0EA6CCBC349D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8FACBF0-E14F-49CC-A8FF-7B4BF1E218EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8FACBF0-E14F-49CC-A8FF-7B4BF1E218EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8FACBF0-E14F-49CC-A8FF-7B4BF1E218EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8FACBF0-E14F-49CC-A8FF-7B4BF1E218EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
