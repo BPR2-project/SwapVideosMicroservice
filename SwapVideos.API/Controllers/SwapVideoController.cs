@@ -62,4 +62,17 @@ public class SwapVideoController : VideoControllerBase
             return Ok(swapVideo);
         });
     }
+
+    public override Task<ActionResult<Video>> TagVideoAsIndexed(Guid videoId, bool? isIndexed)
+    {
+        return Task.Run<ActionResult<Video>>(() =>
+        {
+            var video = _swapVideosService.TagVideoAsIndexed(videoId, isIndexed ?? false);
+
+            if (video == null)
+                return NotFound();
+
+            return Ok(video);
+        });
+    }
 }
