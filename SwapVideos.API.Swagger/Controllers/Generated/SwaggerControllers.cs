@@ -45,6 +45,18 @@ namespace SwapVideos.API.Swagger.Controllers.Generated
         [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("video/videoId/{videoId}")]
         public abstract System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<Video>> GetVideo([Microsoft.AspNetCore.Mvc.ModelBinding.BindRequired] System.Guid videoId);
 
+        /// <summary>
+        /// Tag a video as indexed or not
+        /// </summary>
+        /// <remarks>
+        /// Tag a video as indexed or not
+        /// </remarks>
+        /// <param name="videoId">Video id</param>
+        /// <param name="isIndexed">Bool to state whether the video is indexed or not</param>
+        /// <returns>Operation succeded</returns>
+        [Microsoft.AspNetCore.Mvc.HttpPut, Microsoft.AspNetCore.Mvc.Route("video/videoId/{videoId}")]
+        public abstract System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<Video>> TagVideoAsIndexed([Microsoft.AspNetCore.Mvc.ModelBinding.BindRequired] System.Guid videoId, [Microsoft.AspNetCore.Mvc.FromQuery] bool? isIndexed);
+
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.20.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.0.0))")]
@@ -63,10 +75,22 @@ namespace SwapVideos.API.Swagger.Controllers.Generated
         public string Name { get; set; }
 
         /// <summary>
+        /// Video description
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("Description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Description { get; set; }
+
+        /// <summary>
         /// Link to the video's blob storage
         /// </summary>
         [Newtonsoft.Json.JsonProperty("VideoLink", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string VideoLink { get; set; }
+
+        /// <summary>
+        /// Modifier to show whether the video is indexed or not
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("IsIndexed", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? IsIndexed { get; set; }
 
         public string ToJson()
         {

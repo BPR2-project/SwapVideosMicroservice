@@ -7,8 +7,8 @@ namespace SwapVideos.Services;
 
 public class SwapVideosService: ISwapVideosService
 {
-    private ISwapVideoEntityRepository _swapVideoEntityRepository;
-    private IMapper _mapper;
+    private readonly ISwapVideoEntityRepository _swapVideoEntityRepository;
+    private readonly IMapper _mapper;
 
     public SwapVideosService(ISwapVideoEntityRepository swapVideoEntityRepository, IMapper mapper)
     {
@@ -18,6 +18,9 @@ public class SwapVideosService: ISwapVideosService
 
     public Video? GetVideo(Guid id)
     {
+        if (!_swapVideoEntityRepository.ExistsById(id))
+            return null;
+        
         var swapVideoEntity = _swapVideoEntityRepository.GetById(id);
 
         return _mapper.Map<Video>(swapVideoEntity);
@@ -31,5 +34,20 @@ public class SwapVideosService: ISwapVideosService
             .Select(a => _mapper.Map<Video>(a))
             .ToList();
         return (videos, swapVideoEntities.totalsize);
+    }
+
+    public Video? TagVideoAsIndexed(Guid id, bool isIndexed)
+    {
+        if (!_swapVideoEntityRepository.ExistsById(id))
+            return null;
+
+        var videoEntity = _swapVideoEntityRepository.GetById(id);
+
+        videoEntity.IsIndexed = isIndexed;
+        
+        _swapVideoEntityRepository.Update(videoEntity, "system");
+        _swapVideoEntityRepository.Save();
+
+        return _mapper.Map<Video>(videoEntity);
     }
 }

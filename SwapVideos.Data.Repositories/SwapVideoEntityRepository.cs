@@ -47,4 +47,11 @@ public class SwapVideoEntityRepository: BaseRepository<SwapVideoEntity>, ISwapVi
 
         return (query.ToList(), totalSize);
     }
+
+    public bool ExistsById(Guid id)
+    {
+        return DbSet.Any(a => a.Id == id
+                              && a.DestroyedAt == null
+                              && a.DestroyedBy == null);
+    }
 }
